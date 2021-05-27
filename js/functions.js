@@ -1,7 +1,6 @@
 "use strict";
 
 /**
- * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
  *
@@ -9,20 +8,35 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name) {
+    return "Hello " + name + "!";
+}
+
+var name = sayHello ("codeup")
+
+console.log(name)
 /**
- * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
  *
  * console.log 'helloMessage' to check your work
  */
 
+//var name =  sayHello ("codeup")
+var helloMessage = sayHello ("Christian")
+
+//console.log(name)
+console.log(helloMessage)
+
 /**
- * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var myName = sayHello ("Christian")
+
+console.log(myName)
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -33,6 +47,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
+ *
  *
  * Example
  * > isTwo(1) // returns false
@@ -45,6 +60,17 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+
+function isTwo(number){
+    if(number / 2 == 1){
+        return true
+    }
+    else{
+        return false
+    }
+}
+console.log(isTwo(random))
+
 
 /**
  * TODO:
@@ -79,3 +105,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(num1, num2) {
+    return num1 - (num2 * num1);
+}
+
+console.log
