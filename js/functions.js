@@ -43,7 +43,7 @@ console.log(myName)
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
- * TODO:
+ *
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
@@ -73,7 +73,7 @@ console.log(isTwo(random))
 
 
 /**
- * TODO:
+ *
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
  * bill, and return the amount to tip
@@ -84,15 +84,25 @@ console.log(isTwo(random))
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tipPercent, billTotal) {
+    var x = tipPercent
+    var y = billTotal
+    return (x * y)
+}
+
+console.log(calculateTip)
 /**
- * TODO:
+ *
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var userInput = prompt('Your bill total is ' + y + ', how much would you like to tip?');
+alert('Great! Your total will be' + (userInput * y) + ', with tip included!');
 
+console.log()
 /**
- * TODO:
+ *
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
  * and 1). It should return the result of applying the discount to the original
