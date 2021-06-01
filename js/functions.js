@@ -88,17 +88,18 @@ function calculateTip(tipPercent, billTotal) {
     var x = tipPercent
     var y = billTotal
     return (x * y)
-}
 
-console.log(calculateTip)
-/**
- *
- * Use prompt and alert in combination with your calculateTip function to
- * prompt the user for the bill total and a percentage they would like to tip,
- * then display the dollar amount they should tip
- */
-var userInput = prompt('Your bill total is ' + y + ', how much would you like to tip?');
-alert('Great! Your total will be' + (userInput * y) + ', with tip included!');
+    console.log(calculateTip)
+    /**
+     *
+     * Use prompt and alert in combination with your calculateTip function to
+     * prompt the user for the bill total and a percentage they would like to tip,
+     * then display the dollar amount they should tip
+     */
+    var userInput = prompt('Your bill total is ' + y + ', how much would you like to tip?');
+    alert('Great! Your total will be' + (userInput * y) + ', with tip included!');
+
+}
 
 console.log()
 /**
