@@ -127,7 +127,7 @@ console.log(calculateTotal(3, 100));
 console.log(calculateTotal(4, 100));
 console.log(calculateTotal(5, 100));
 /**
- * TODO:
+ *
  * Uncomment the line below to generate a random number between 0 and 6.
  * Prompt the user for their total bill, then use your `calculateTotal` function
  * and alerts to display to the user what their lucky number was, what their
@@ -156,3 +156,23 @@ alert("Your total bill including your discount is now " + calculateTotal(luckyNu
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var answer = confirm("Would you like to enter a number?");
+if (answer) {
+    var number = prompt("Enter a number");
+    if (isNaN(number)) {
+        alert("Not a number");
+    } else {
+        if (number % 2 == 0) {
+            alert("Number is even");
+        } else {
+            alert("Number is odd");
+        }
+        alert("100 plus your number is " + Number(number+100));
+        if (number < 0) {
+            alert("Number is negative");
+        } else {
+            alert("Number is even");
+        }
+    }
+}
