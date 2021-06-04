@@ -21,7 +21,7 @@ for (var index = 0; index < 10; index++)
 }
 
 var index = 0
-//line 23 resets our variable to zero so the next loop actiates again
+//line 23 resets our variable to zero so the next loop activates again
 
 while(index < 10) {
     //do something
