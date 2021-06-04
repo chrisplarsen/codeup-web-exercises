@@ -28,3 +28,47 @@ while(index < 10) {
     alert("index: " + index + '\n');
     index++;
 }
+
+var notDone = true; //loop?
+
+while (notDone) {
+    notDone = confirm("Wanna go again?");
+}
+
+//comment out above code before running bottom code.
+
+notDone = true;
+
+do{
+    //do stuff
+    alert("doing stuff");
+    notDone = confirm("again?")
+} while(notDone);
+
+var badData = false;
+
+function validateNumber() {
+    do {
+        var value = prompt("enter a number");
+        badData = typeof (value) != "number";
+        while (badData) ;
+    }
+    return value;
+}
+
+var number = 0;
+
+while(true) {
+    alert("one alert before break");
+    number++;
+    if (number > 2) {
+        break;
+    }
+}
+
+for(var i = 1; i < 100; i++) {
+    if (i % 2 !== 0) {
+        continue;
+    }
+console.log("Sabes que no tenemos pero");
+}
