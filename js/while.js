@@ -8,3 +8,30 @@ while (true) { //while the following is true
 //    console.log('while iteration #' + condition);
 //    condition * 2;
 }
+
+//next is my Do While Loop
+
+//var numberOfCones = Math.ceil(Math.random() * 50) + 50;
+//
+//do {
+//    var conesSold = Math.floor(Math.random() * 5) + 1;
+//    numberOfCones - conesSold
+//} while (numberOfCones > 0);
+
+//teacher walk through below
+
+let totalSales = Math.ceil(Math.random() * (100-50) + 50);
+console.log(totalSales);
+
+let totalSold = 0;
+
+do {
+    let conesBought = Math.ceil(Math.random() * (5 - 1) + 1);
+    if ((totalSold + conesBought) > totalSales) {
+        console.log("Sorry I can't sell " + conesBought);
+        continue;
+    }
+    console.log("my customer bought " + conesBought);
+    totalSold = totalSold + conesBought;
+    console.log("I've sold this many: " + totalSold);
+} while (totalSold < totalSales);
