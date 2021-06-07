@@ -29,3 +29,14 @@ for (let index = 0; index < 50; index++) {
         //above.
     }
 }
+
+// loop review down below
+
+while (true) {
+    let odd_Number = prompt('Enter an odd number');
+    if (odd_Number == 1) {
+        if (odd_Number % 2 == 1) {
+            break;
+        }
+    }
+}

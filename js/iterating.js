@@ -47,7 +47,7 @@ names.forEach(function(name) {
 });
 
     /**
-     * TODO:
+     *
      * Create the following three functions, each will accept an array and
      * return an an element from it
      * - first: returns the first item in the array
@@ -60,15 +60,38 @@ names.forEach(function(name) {
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+function testFunc(index) {
+    var list1 = ['a', 'b', 'c', 'd'];
+    return list1[0];
+    }
+
 function name1(newNames) {
     return newNames[0];
 }
 
+    var nameList = ['a', 'b', 'c', 'd'];
+    var firstName = name1(nameList);
+
+console.log(firstName);
+
+function name2(newNames) {
+    return newNames[1];
+}
+
 var nameList = ['a', 'b', 'c', 'd'];
+var secondName = name2(nameList);
 
-var firstName = name1(nameList);
+console.log(secondName);
 
-console.log(firstName)
+function name3(newNames) {
+    return newNames[2];
+}
+
+var nameList = ['a', 'b', 'c', 'd'];
+var thirdName = name3(nameList);
+
+console.log(thirdName);
+
 
 })();
 
