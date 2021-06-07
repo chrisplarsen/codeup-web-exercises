@@ -4,7 +4,6 @@
     var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
     /**
-     *
      * Read each console log below, and write some javascript code to perform
      * the step that it describes
      */
