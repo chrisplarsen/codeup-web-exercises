@@ -92,6 +92,23 @@ var thirdName = name3(nameList);
 
 console.log(thirdName);
 
+function first(array) {
+    return array[0];
+}
+
+console.log(first(nameList))
+
+function second(array) {
+    return array [1];
+}
+
+console.log(second(nameList))
+
+function third(array) {
+    return array [2];
+}
+
+console.log(third(nameList));
 
 })();
 

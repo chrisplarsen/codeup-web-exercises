@@ -52,8 +52,9 @@ function validateNumber() {
         var value = prompt("enter a number");
         badData = typeof (value) != "number";
         while (badData) ;
+    } while (yee) {
+        return value;
     }
-    return value;
 }
 
 var number = 0;
