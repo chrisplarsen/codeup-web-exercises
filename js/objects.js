@@ -36,7 +36,7 @@ person.sayHello = function() {
 
 console.log(person.sayHello());
 
-    /** TODO:
+    /**
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
      * discount. Write a JS program, using conditionals, that logs to the
@@ -180,5 +180,9 @@ for (var index = 0; index <= 4; index++)
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+function createBook(titleName, AuthorName) {
+
+    }
 
 })();
