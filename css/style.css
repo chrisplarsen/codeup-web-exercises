@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+h1, h2 {
+    color: teal;
+    text-decoration: underline;
+}
+
+body{
+    background-color: gray;
+    background-image: url("")
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+td, tr {
+    padding: 10px;
+    font-size: iem;
+}
+
+a {
+    color: #333333;
+    transition : 500px;
+}
+
+a: hover {
+    color: #eeeeee;
+
+}
