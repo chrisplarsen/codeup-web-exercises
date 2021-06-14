@@ -18,15 +18,14 @@ ul > li {
 
 td, tr {
     padding: 10px;
-    font-size: iem;
+    font-size: 10px;
 }
 
 a {
     color: #333333;
-    transition : 500px;
 }
 
-a: hover {
+a:hover {
     color: #eeeeee;
 
 }
