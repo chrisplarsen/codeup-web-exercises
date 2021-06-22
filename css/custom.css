@@ -1,0 +1,22 @@
+.jumbotron {
+    width: 100%;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.display-4 {
+    position: absolute;
+    background-color: lightgray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nav-item {
+    margin: 0 1em;
+}
+
+.nav-item-ass {
+    display: flex;
+    justify-content: space-between;
+}
