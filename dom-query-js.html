@@ -27,18 +27,43 @@
 
 <button id="button-1">Change header</button>
 
-<button id="button-2"></button>
+<button id="button-2">Change sub head color</button>
 
-<button id="button-3"></button>
+<button id="button-3">Change list item colors</button>
 
-<button id="button-4"></button>
+<button id="button-4">Mission Accomplished?</button>
 
 <script>
 
-  var btn1 = document.getElementById('button1');
-  btn1.addEventListener('click', function(h1change) {
+  var btn1 = document.getElementById('button-1');
+  btn1.addEventListener('click', function(h1Change) {
     var mainHeader = document.getElementById("main-header");
     mainHeader.innerHTML = "JavaScript is Cool"
+  });
+
+  var btn2 = document.getElementById('button-2');
+  btn2.addEventListener('click', function(h2Change) {
+    var subHeader = document.getElementById("sub-header");
+    subHeader.style.color = "blue";
+  });
+
+  var btn3 = document.getElementById('button-3');
+  btn3.addEventListener('click', function(liItemsChange) {
+    var listItems = document.getElementsByTagName("li");
+    for(var i = 0; i < listItems.length; i += 2) {
+      listItems[i].style.color = "grey";
+    }
+  //  for(let item of listItems) {
+  //    if (item[i].getAttribute("data-dbid") === "1") {
+  //      item.style.color = "blue";
+  //    }
+  //  }
+  });
+
+  var btn4 = document.getElementById('button-4');
+  btn4.addEventListener('click', function(h4Change) {
+    var subParagraphs = document.getElementsByClassName("sub-paragraph");
+    subParagraphs.innerHTML = "Mission Accomplished!";
   });
 
   //(function() {
