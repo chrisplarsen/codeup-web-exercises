@@ -115,10 +115,10 @@ function arrayOfObjectsToStrings(arrayOfObjectsParam) {
     arrayOfObjectsParam.forEach(function(object) {
         results.push(object.originalString);
     })
-    console.log(result)
+    return results.join(" ");
 }
 
-arrayOfObjectsToStrings(arrayOfObjects);
+console.log(arrayOfObjectsToStrings(arrayOfObjects));
 
 // TODO: Create a function named getTallUsers that accepts an array of objects. The objects in the array will be in the same format
 //  as PersonOne, PersonTwo, and PersonThree. The functions job is to return an array of users that have heightInInches equal to or greater than 65.
