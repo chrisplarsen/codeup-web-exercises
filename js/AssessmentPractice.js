@@ -100,3 +100,31 @@ console.log(numberInfo(-2));
 
 //
 
+function removeDuplicates(arrayOfStrings) {
+    return [...new Set(arrayOfStrings)];
+}
+
+//var uniqueString = [];
+//
+//for(let i = 0; i < arrayOfStrings.length; i++) {
+//    if (uniqueStrings.includes(arrayOfStrings[i])){
+//    } else {
+//        uniqueStrings.push(arrayOfStrings[i])
+//    }
+//}
+
+//
+function mostOccuringNumber(numbers) {
+    var counts = [];
+    for (let i = 0; i < numbers.length; i++) {
+        var aNumber = numbers[i];
+        if(counts[aNumber] === undefined) {
+            counts[aNumber] = 1;
+        } else {
+            counts[aNumber]++;
+        }
+    }
+    console.log(counts);
+}
+
+console.log(mostOccuringNumber([8,93,28,8,27,-62,32,8,-62]));
