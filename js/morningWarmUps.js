@@ -91,12 +91,15 @@ var personThree = {
 //                    { "originalString":"dave", lengthOfOriginalString:4 }
 //                   ]
 
-function arraysToObjects(index) {
-    var notSureOnName = {}
-        notSureOnName.originalString = index;
-        notSureOnName.countOfLetters = index.length;
+function arrayOfStringsToObjects(arrayString) {
+    var object = []
+    for (i = 0; i < arrayString.length; i++) {
+        object.push ({originalString: arrayString[i],
+            lengthOfArrayString:arrayString[i].length});
+    }
+    return object;
 }
-console.log(arraysToObjects);
+var arrayOfObjects = arrayOfStringsToObjects("hello", "dave");
 
 // Part 2
 // TODO: Create a function that takes the array of objects from PART 1
@@ -107,9 +110,16 @@ console.log(arraysToObjects);
 //                  ]
 //          returns: "hello dave"
 
-function arrayToConString (index) {
-    return object.originalString
+function arrayOfObjectsToStrings(arrayOfObjectsParam) {
+    var results = [];
+    arrayOfObjectsParam.forEach(function(object) {
+        results.push(object.originalString);
+    })
+    console.log(result)
 }
+
+arrayOfObjectsToStrings(arrayOfObjects);
+
 // TODO: Create a function named getTallUsers that accepts an array of objects. The objects in the array will be in the same format
 //  as PersonOne, PersonTwo, and PersonThree. The functions job is to return an array of users that have heightInInches equal to or greater than 65.
 var people = [personOne,personTwo,personThree];
