@@ -1,3 +1,11 @@
+var band = [];
+
+band.shred = function() {
+    console.log('RAAAAAAAAAA!!!!');
+}
+
+band.shred();
+
 // TODO: Create a function named countSpaces that accepts a string and returns the total number of spaces in the string.
 
 function countSpaces(count) {
