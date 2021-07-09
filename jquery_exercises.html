@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JQuery</title>
 </head>
 <body>
+<h1>JQuery Intro Exercise</h1>
+<div class="sectional" id="section1">
+    <p class="paragraphs" id="paragraph1">Now I gotta give you a list</p>
+</div>
+<div class="sectional" id="section2">
+    <p class="paragraphs" id="paragraph2">List</p>
+    <ul class="lists" id="list1">
+        <li class="listItems" id="listItem1">Item 1</li>
+        <li class="listItems" id="listItem2">Item 2</li>
+        <li class="listItems" id="listItem3">Item 3</li>
+    </ul>
+</div>
 
+<script src="./js/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        alert( 'The DOM has finished loading!' );
+    });
 
-    <script src="/js/jquery.js"></script>
+    //id selector stuff
+    //$('#list1').ready(function() {
+    //    alert("A rat!");
+    //})
+    //$('#listItem1').css('font-size', '50px');
+    //$('#listItem3')
+</script>
 </body>
 </html>
