@@ -125,6 +125,9 @@ function mostOccuringNumber(numbers) {
         }
     }
     console.log(counts);
+    for (const countsKey in counts) {
+        console.log("the ounts element at index " + countsKey + " is value " + counts[countsKey]);
+    }
 }
 
 console.log(mostOccuringNumber([8,93,28,8,27,-62,32,8,-62]));
