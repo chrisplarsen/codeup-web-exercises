@@ -127,16 +127,16 @@ var people = [personOne,personTwo,personThree];
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
 //
 
-function getTallUsers (index) {
-    for (i = 0; i <= index.length - 1; i++);
-        if (index.heightInInches >= 65) {
-            return index;
+function getTallUsers(arrayOfObjects) {
+    var tallUsers = []
+    for (i = 0; i < arrayOfObjects.length; i++) {
+        var currentUser = arrayOfObjects[i];
+        var currentUsersHeight = currentUser.heightInInches;
+        if(currentUsersHeight >= 65) {
+            tallUsers.push(currentUser);
         }
+    }
+    return tallUsers;
 }
 
-console.log(getTallUsers);
-
-
-
-
-
+console.log(getTallUsers(people));
