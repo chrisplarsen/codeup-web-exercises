@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+$.ajax('url',{
+type: 'get",'
+dataType: 'json'
+}).done(function (data, status, jqXhr) {
+data
+var firstUser = data[0]
+var htmlMessage = <p> + firstUser.first_name +</p>
+}
+
+for (let i = 0; i < data.length; i++) {
+var currentuser = data[i];
+console.log(currentuser)
+
+}

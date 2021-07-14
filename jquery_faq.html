@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        $('#highlighter').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', 'yellow')
+            })
+        })
+
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        $('li').click(function() {
+            $(this).parent().children().first().css('color', 'blue');
+        });
+</body>
+</html>

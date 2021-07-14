@@ -43,17 +43,35 @@
     //$('li').css("background-color", "#FFFF00");
     //$('p').css("background-color", "#FFFF00");
     $('h1').click(function(e) {
-        .css("background-color", "#FFFF00");
+        $('h1').css("background-color", "#FFFF00");
     });
 
     $('paragraphs').dblclick(function(e) {
-        .css("font-size", '20px';
+        $('paragraphs').css("font-size", '20px');
     });
 
     $('li').hover(
         function() {
             $(this).css('background-color', 'red');
-        },
+        });
+
+    $('#textfield').keydown(function (event) {
+        console.log('output something key down')
+    });
+
+    function doKeyDown(event) {
+        if(event.key.toLowerCase() === 'a') {
+            console.log('a pressed');
+        } else if(event.key.toLowerCase() === 'b') {
+            console.log('b pressed');
+        } else if(event.key.toLowerCase() === 'arrowleft') {
+            console.log('left arrow pressed')
+        } else {
+            console.log(event.ley + ' pressed')
+        }
+    }
+
+    $('#textfield').keydown(doKeyDown);
 </script>
 </body>
 </html>
