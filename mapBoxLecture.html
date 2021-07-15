@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapBox</title>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+
+
+
+<div id='map' style='width: 90vw; height: 90vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<script>
+  mapboxgl.accessToken = mapboxAPIKey;
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom: 10,
+    center: [-96.808891, 32.779167]
+  });
+
+  var marker = new mapboxgl.Marker()
+      .setLngLat([-96.808891, 32.779167])
+      .addTo(map);
+    //this is a marker to ping coords of Dallas
+
+  var locationToSearchFor = "300 Reunion Blvd E, Dallas, TX 75207"
+  //this is a var we made to use in following functions; we can even use
+
+  //function(findByAddress(searchTerm){} (replace geocode address below with searchTerm
+  geocode("300 Reunion Blvd E, Dallas, TX 75207",mapboxAPIKey).then(function(data){
+      console.log("Here are the coordinates for the following location ${locationToSearchFor}");
+      console.log(data);
+
+      var reunionTowerMarker = new mapboxgl.Marker()
+          .setLngLat(data)
+          .addTo(map);
+      //marker for Reunion Tower
+
+      var reunionTowerPopup = new mapboxgl.Popup()
+        .setHTML("<p>Reunion Tower</p>")
+        .addTo(map)
+      //The popup box
+  })
+
+  //$(document).click(function(){
+  //findByAddress(usersLocation)
+  //})
+  //need jquery for this ^
+
+  //var usersLocation = prompt('Where do you want to go?')
+
+  //var coordinatesToSearchBy = {lng: , lat: }
+
+  //reverseGeocode(coordinatesToSearchBy,mapboxAPIKey).then(function(data) {
+    //  console.log(data);
+  //})
+
+</script>
+
+</body>
+</html>
