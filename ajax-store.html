@@ -17,6 +17,8 @@
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
+
+    <button id="refresh button">reload tool data</button>
 </table>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -25,16 +27,32 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax({
-        url: "data/inventory.json",
-        type: "GET",
-        data: {
-            limit:  10,
-            offset: 20
-        }
-    }).done(function(data) {
-        // do something with the data
-    });
+
+    getData();
+
+    function getData() {
+
+        $.ajax('data/inventory.json').done(function(data) {
+            console.log(data);
+            var html = '';
+
+            $('#insertProducts').empty();
+
+            data.forEach(function (tool) {
+                console.log(tool);
+                html = '<tr> <td>${tool.title}</td>; <td>${tool.quantity}</td>; <td>${tool.price}</td>; <td>${tool.categories}</td>; </tr>';
+
+                $('#insertProducts').append(html);
+            })
+
+        }).fail(function (error) {
+            console.log('error object ' + error);
+        });
+    }
+
+    setInterval(getData, 3000);
+
+    $('#refresh').click(getData);
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
