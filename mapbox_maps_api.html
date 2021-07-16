@@ -46,9 +46,42 @@
 
     var tampopoPopup = new mapboxgl.Popup()
             .setHTML("<p>Tampopo Japanese Cafe</p>")
-            .addTo(map)
+            //.addTo(map)
 
     tampopoMarker.setPopup(tampopoPopup)
+  })
+
+  var restaurant = [
+      {
+          name: 'McDonalds',
+          address: '',
+      },
+      {
+          name: '',
+          address: '',
+      },
+      {
+          name: '',
+          address: '',
+      }
+  ];
+
+  restaurant.forEach(function(restaurants) {
+      geocode("6130 Greenville Ave # 100, Dallas, TX 75206",mapboxAPIKey).then(function(data){
+          console.log("Here are the coordinates for the following location ${tampopoJapaneseCafe}");
+          console.log(data);
+
+          var tampopoMarker = new mapboxgl.Marker()
+              .setLngLat(data)
+              .addTo(map)
+          //marker
+
+          var tampopoPopup = new mapboxgl.Popup()
+              .setHTML("<p>restaurants.name</p>") //${restaurant.name}
+          //.addTo(map)
+
+          tampopoMarker.setPopup(tampopoPopup)
+      })
   })
 </script>
 
