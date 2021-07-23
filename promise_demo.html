@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //this actually goes into <script> in html
+  //API call using vanilla JS as opposed to JQuery
+  function getUsersFromGithubAsJSON() {
+    return fetch("https://api.github.com/users")
+            .then(function(response) {
+              return response.json();
+            });
+  };
+
+  getUsersFromGithubAsJSON()
+          .then(function (userData) {
+            for (const user of userData) {
+              console.log(user);
+            }
+          });
+
+  console.log("end of script");
+
+  //a function that returns a new promise
+  function makeNewPromise() {
+    let myPromise = new Promise(function (resolve, reject) {
+      return resolve(`hey promise`);
+    });
+    return myPromise;
+  }
+  makeNewPromise("the promise has made it to the benchmark")
+    .then(function(msg) {
+      console.log(msg);
+  }).catch(function(error) {
+    console.log(`ERROR:`, error);
+  });
+
+  console.log(`end of script`);
+</script>
+
+</body>
+</html>
