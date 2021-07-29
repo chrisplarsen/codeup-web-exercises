@@ -42,8 +42,8 @@ function AJAX(url, method = "GET", data) {
     //    });
 
 //This is to fetch a single movie
-    //AJAX(serverURL + "/3")
-    //.then(data => console.log(data))
+    AJAX(serverURL + "/3")
+    .then(data => console.log(data))
 
 //This is to update an individual movie/record/yknow
     AJAX(serverURL + "/9", "PUT", {
